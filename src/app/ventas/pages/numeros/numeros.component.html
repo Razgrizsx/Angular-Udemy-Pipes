@@ -1,0 +1,22 @@
+<div class="text-layout">
+    <h1>Pipes Decimal y Porcentaje</h1>
+    <p>Pipes incluidos en Angular - Common Module</p>  
+</div>
+
+<div class="grid">
+    <div class="col-4">
+        <p-card header="Netas" [subheader]="netas.toString() + ' netas | number'">
+            {{netas | number:'1.2-2'}}
+        </p-card>
+    </div>
+    <div class="col-4">
+        <p-card header="Bruto" [subheader]="netas.toString() + ' netas | currency'">
+            {{netas | currency}}
+        </p-card>
+    </div>
+    <div class="col-4">
+        <p-card header="Porcentaje" [subheader]="porcentaje.toString() + ' porcentaje | percent'">
+            {{porcentaje | percent: "1.2-2"}}
+        </p-card>
+    </div>
+</div>
